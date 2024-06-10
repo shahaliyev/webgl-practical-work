@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <script src="../_common/MV.js"></script>
+    <script src="../_common/initShaders.js"></script>
+    <script src="../_common/webgl-utils.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <canvas id="canvas" width="300px" height="300px"></canvas>
+
+    <script type="notjs" id="vertex-shader">
+        attribute vec4 vPosition;
+
+        void main() {
+            gl_Position = vPosition;
+        }
+    </script>
+
+    <script type="notjs" id="fragment-shader">
+        precision mediump float;
+        void main() {
+            gl_FragColor = vec4(1, 1, 0, 1);
+        }
+    </script>
+</body>
+</html>
